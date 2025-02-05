@@ -28,6 +28,8 @@ setuptools.setup(
             "sphinx-rtd-theme",
             "sphinx-autodoc-typehints",
             "pytest",
+            "pytest-cov",  # Added for test coverage
+            "coverage",  # Added for generating coverage reports
             "pre-commit",
             "ruff",
             "black",

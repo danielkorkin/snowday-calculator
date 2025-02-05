@@ -1,0 +1,12 @@
+coverage:
+  status:
+    project:
+      default:
+        target: 75         # Set your minimum coverage target to 75%
+    patch:
+      default:
+        target: 75
+ignore:
+- tests/*
+- docs/*
+- setup.py       # also ignore setup.py
