@@ -1,0 +1,36 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v2.3.0
+  hooks:
+  - id: check-yaml
+  - id: end-of-file-fixer
+  - id: trailing-whitespace
+
+- repo: https://github.com/charliermarsh/ruff-pre-commit
+  rev: v0.0.241
+  hooks:
+  - id: ruff
+        # Pass the `--fix` flag and set max line length to 110
+    args: [--fix, --line-length, '110']
+
+- repo: https://github.com/psf/black
+  rev: 22.3.0
+  hooks:
+  - id: black
+    language_version: python3
+        # Set the max line length for Black to 110
+    args: [--line-length, '110']
+
+- repo: local
+  hooks:
+  - id: yamlfmt
+    name: yamlfmt
+    entry: yamlfmt -w
+    language: python
+    files: \.(ya?ml)$
+
+- repo: https://github.com/PyCQA/doc8
+  rev: 0.11.0
+  hooks:
+  - id: doc8
+    files: \.rst$
