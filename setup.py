@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setuptools.setup(
     name="snowday-calculator",
-    version="0.1.0",
+    version="0.1.1",
     author="Daniel Korkin",
     author_email="daniel.d.korkin@gmail.com",
     description="A package for calculating snow day predictions.",
